@@ -35,3 +35,5 @@ API.
 
 - You can’t interact with the Telegram API using webhooks. You have to maintain
   a connection with Telegram servers.
+
+<!-- TODO: compare with TDLib -->
