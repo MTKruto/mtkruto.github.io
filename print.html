@@ -236,7 +236,7 @@ to start since we don’t have a persistency layer for the sake of staying simpl
 <pre><code class="language-ts">const client = new Client();
 
 console.log(&quot;Starting client...&quot;);
-await client.start();
+await client.connect();
 console.log(&quot;Client started.&quot;);
 </code></pre>
 <p>The above code initializes a client with the default parameters and no API
@@ -262,7 +262,7 @@ console.log(&quot;Ping took&quot;, `${diff}ms.`);
 const client = new Client();
 
 console.log(&quot;Starting client...&quot;);
-await client.start();
+await client.connect();
 console.log(&quot;Client started.&quot;);
 
 const before = Date.now();
@@ -313,7 +313,7 @@ to start since we don’t have a persistency layer for the sake of staying simpl
 <pre><code class="language-ts">const client = new Client();
 
 console.log(&quot;Starting client...&quot;);
-await client.start();
+await client.connect();
 console.log(&quot;Client started.&quot;);
 </code></pre>
 <p>The above code initializes a client with the default parameters and no API
@@ -339,7 +339,7 @@ console.log(&quot;Ping took&quot;, `${diff}ms.`);
 const client = new Client();
 
 console.log(&quot;Starting client...&quot;);
-await client.start();
+await client.connect();
 console.log(&quot;Client started.&quot;);
 
 const before = Date.now();
@@ -387,7 +387,7 @@ to start since we don’t have a persistency layer for the sake of staying simpl
 <pre><code class="language-ts">const client = new Client();
 
 console.log(&quot;Starting client...&quot;);
-await client.start();
+await client.connect();
 console.log(&quot;Client started.&quot;);
 </code></pre>
 <p>The above code initializes a client with the default parameters and no API
@@ -417,7 +417,7 @@ console.log(&quot;Ping took&quot;, `${diff}ms.`);
             const client = new Client();
 
             console.log(&quot;Starting client...&quot;);
-            await client.start();
+            await client.connect();
             console.log(&quot;Client started.&quot;);
 
             const before = Date.now();
