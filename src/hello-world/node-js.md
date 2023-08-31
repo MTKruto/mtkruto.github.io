@@ -44,7 +44,7 @@ to start since we don’t have a persistency layer for the sake of staying simpl
 const client = new Client();
 
 console.log("Starting client...");
-await client.start();
+await client.connect();
 console.log("Client started.");
 ```
 
@@ -84,7 +84,7 @@ const { Client, functions } = require("@mtkruto/node");
 const client = new Client();
 
 console.log("Starting client...");
-await client.start();
+await client.connect();
 console.log("Client started.");
 
 const before = Date.now();

@@ -40,7 +40,7 @@ Extend the contents of the `<script>` tag with this snippet:
 const client = new Client();
 
 console.log("Starting client...");
-await client.start();
+await client.connect();
 console.log("Client started.");
 ```
 
@@ -84,7 +84,7 @@ File name: ping.html
             const client = new Client();
 
             console.log("Starting client...");
-            await client.start();
+            await client.connect();
             console.log("Client started.");
 
             const before = Date.now();
