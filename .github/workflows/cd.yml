@@ -1,11 +1,11 @@
-name: Publish
+name: cd
 
 on:
   push:
     branches: [main]
 
 permissions:
-    contents: write
+  contents: write
 
 jobs:
   deploy:
