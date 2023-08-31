@@ -4,11 +4,11 @@ MTKruto is available for Node.js on npm as
 [`@mtkruto/node`](https://npm.im/@mtkruto/node). Here you will learn how you can
 use MTKruto in your Node.js project.
 
-## Prerequisites
+## Prequisites
 
 - [Node.js](https://nodejs.org)
 
-## Initial Setup
+## Setup
 
 First, create a directory for our project, initialize package.json, and install
 MTKruto:

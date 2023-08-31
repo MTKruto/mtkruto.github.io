@@ -7,7 +7,7 @@ can initialize a client, connect it, and invoke a ping request.
 
 - [Deno](https://deno.land)
 
-## Initial Setup
+## Setup
 
 For this guide, we will have only a single file and we won’t persist any data
 since we won’t reuse the connection. For most projects, we recommend having a
