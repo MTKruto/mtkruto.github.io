@@ -45,11 +45,11 @@ API.
 
 ## MTKruto vs. TDLib
 
-TDLib is the official client library for the Telegram API. It is ideal,
-cross-platform, and contains everything required to build fully-featured
-Telegram clients, be it native graphical apps, web apps, or bots. Inside
-JavaScript runtimes, TDLib can be used either as a Wasm module, or imported as a
-dynamic library to use its FFI.
+[TDLib](https://core.telegram.org/tdlib) is the official client library for the
+Telegram API. It is ideal, cross-platform, and contains everything required to
+build fully-featured Telegram clients, be it native graphical apps, web apps, or
+bots. Inside JavaScript runtimes, TDLib can be used either as a Wasm module, or
+imported as a dynamic library to use its FFI.
 
 TDLib focuses on getting the most out of the platform it runs on, while MTKruto
 focuses on getting the most out of the JavaScript runtime it runs on. MTKruto
