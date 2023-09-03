@@ -177,17 +177,21 @@ more productive. We highly recommend it if you’re planning to develop complex
 bots.</p>
 <p>On the other hand, the Telegram API is the main API for building Telegram
 clients. It uses the <a href="https://core.telegram.org/mtproto">MTProto</a> protocol which
-makes it a little more difficult to consume than the Bot API. Telegram clients
-can be a GUI application on an end user’s device, or a process running
-continuously in a server.</p>
+makes it a little more difficult to consume without a library than the Bot API.
+Telegram clients can be a GUI application on an end user’s device, or a process
+running continuously in a server.</p>
 <p>While the Bot API can only be used to work with bot accounts, the Telegram API
 can be used to work with both bot and user accounts. As mentioned previously,
 the Bot API is simply an interface to work with bot accounts using the Telegram
 API.</p>
 <h2 id="when-to-use-the-telegram-api"><a class="header" href="#when-to-use-the-telegram-api">When to Use the Telegram API</a></h2>
 <ul>
+<li>If you want to use bot capabilities that are currently not accessible from the
+Bot API (including, but not limited to, getting updates when messages are
+deleted).</li>
 <li>If you want to bypass the limits of the main instance of the Bot API without
-hosting your own instance (e.g., work with large files).</li>
+hosting your own instance (including, but not limited to, work with large
+files).</li>
 <li>If you want to develop your own Telegram app (e.g., alternative to
 <a href="https://web.telegram.org/a">Telegram Web</a>).</li>
 <li>If you want to automate user accounts.</li>
@@ -195,10 +199,25 @@ hosting your own instance (e.g., work with large files).</li>
 </ul>
 <h2 id="things-to-consider"><a class="header" href="#things-to-consider">Things to Consider</a></h2>
 <ul>
+<li>The Telegram API requires its clients to maintain a database even if it is
+used for a bot account, but the Bot API does not.</li>
 <li>You can’t interact with the Telegram API using webhooks. You have to maintain
 a connection with Telegram servers.</li>
+<li>You can’t use both the Bot API and the Telegram API at once for the same bot.</li>
 </ul>
-<!-- TODO: compare with TDLib -->
+<h2 id="mtkruto-vs-tdlib"><a class="header" href="#mtkruto-vs-tdlib">MTKruto vs. TDLib</a></h2>
+<p><a href="https://core.telegram.org/tdlib">TDLib</a> is the official client library for the
+Telegram API. It is ideal, cross-platform, and contains everything required to
+build fully-featured Telegram clients, be it native graphical apps, web apps, or
+bots. Inside JavaScript runtimes, TDLib can be used either as a Wasm module, or
+imported as a dynamic library to use its FFI.</p>
+<p>TDLib focuses on getting the most out of the platform it runs on, while MTKruto
+focuses on getting the most out of the JavaScript runtime it runs on. MTKruto
+tends to be less weighted than TDLib and use the features of the JavaScript
+runtime it runs on wherever possible, possibly making it more suitable for
+JavaScript runtimes.</p>
+<p>It’s also worth mentioning that TDLib hasn’t been used in any of Telegram’s
+official web clients, and JavaScript client implementations were used instead.</p>
 
                     </main>
 
