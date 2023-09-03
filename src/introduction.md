@@ -13,9 +13,9 @@ bots.
 
 On the other hand, the Telegram API is the main API for building Telegram
 clients. It uses the [MTProto](https://core.telegram.org/mtproto) protocol which
-makes it a little more difficult to consume than the Bot API. Telegram clients
-can be a GUI application on an end user’s device, or a process running
-continuously in a server.
+makes it a little more difficult to consume without a library than the Bot API.
+Telegram clients can be a GUI application on an end user’s device, or a process
+running continuously in a server.
 
 While the Bot API can only be used to work with bot accounts, the Telegram API
 can be used to work with both bot and user accounts. As mentioned previously,
@@ -24,8 +24,12 @@ API.
 
 ## When to Use the Telegram API
 
+- If you want to use bot capabilities that are currently not accessible from the
+  Bot API (including, but not limited to, getting updates when messages are
+  deleted).
 - If you want to bypass the limits of the main instance of the Bot API without
-  hosting your own instance (e.g., work with large files).
+  hosting your own instance (including, but not limited to, work with large
+  files).
 - If you want to develop your own Telegram app (e.g., alternative to
   [Telegram Web](https://web.telegram.org/a)).
 - If you want to automate user accounts.
@@ -33,7 +37,10 @@ API.
 
 ## Things to Consider
 
+- The Telegram API requires its clients to maintain a database even if it is
+  used for a bot account, but the Bot API does not.
 - You can’t interact with the Telegram API using webhooks. You have to maintain
   a connection with Telegram servers.
+- You can’t use both the Bot API and the Telegram API at once for the same bot.
 
 <!-- TODO: compare with TDLib -->
