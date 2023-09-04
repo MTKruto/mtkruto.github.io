@@ -200,9 +200,13 @@ connecting to a test server. In this guide, our client will always take a little
 to start since we don’t have a persistency layer for the sake of staying simple.</p>
 <pre><code class="language-ts">const client = new Client();
 
-console.log(&quot;Starting client...&quot;);
-await client.connect();
-console.log(&quot;Client started.&quot;);
+async function main() {
+  console.log(&quot;Starting client...&quot;);
+  await client.connect();
+  console.log(&quot;Client started.&quot;);
+}
+
+main();
 </code></pre>
 <p>The above code initializes a client with the default parameters and no API
 credentials. After that, it initiates a connection with Telegram’s test servers.</p>
@@ -226,14 +230,18 @@ console.log(&quot;Ping took&quot;, `${diff}ms.`);
 
 const client = new Client();
 
-console.log(&quot;Starting client...&quot;);
-await client.connect();
-console.log(&quot;Client started.&quot;);
+async function main() {
+  console.log(&quot;Starting client...&quot;);
+  await client.connect();
+  console.log(&quot;Client started.&quot;);
 
-const before = Date.now();
-await client.invoke(new functions.Ping({ pingId: 1n }));
-const diff = Math.floor(Date.now() - before);
-console.log(&quot;Ping took&quot;, `${diff}ms.`);
+  const before = Date.now();
+  await client.invoke(new functions.Ping({ pingId: 1n }));
+  const diff = Math.floor(Date.now() - before);
+  console.log(&quot;Ping took&quot;, `${diff}ms.`);
+}
+
+main();
 </code></pre>
 <p>Use the following command to run it:</p>
 <pre><code class="language-bash">node ping.js
