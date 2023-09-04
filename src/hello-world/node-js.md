@@ -43,9 +43,13 @@ to start since we don’t have a persistency layer for the sake of staying simpl
 ```ts
 const client = new Client();
 
-console.log("Starting client...");
-await client.connect();
-console.log("Client started.");
+async function main() {
+  console.log("Starting client...");
+  await client.connect();
+  console.log("Client started.");
+}
+
+main();
 ```
 
 The above code initializes a client with the default parameters and no API
@@ -83,14 +87,18 @@ const { Client, functions } = require("@mtkruto/node");
 
 const client = new Client();
 
-console.log("Starting client...");
-await client.connect();
-console.log("Client started.");
+async function main() {
+  console.log("Starting client...");
+  await client.connect();
+  console.log("Client started.");
 
-const before = Date.now();
-await client.invoke(new functions.Ping({ pingId: 1n }));
-const diff = Math.floor(Date.now() - before);
-console.log("Ping took", `${diff}ms.`);
+  const before = Date.now();
+  await client.invoke(new functions.Ping({ pingId: 1n }));
+  const diff = Math.floor(Date.now() - before);
+  console.log("Ping took", `${diff}ms.`);
+}
+
+main();
 ```
 
 Use the following command to run it:
