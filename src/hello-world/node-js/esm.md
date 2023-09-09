@@ -78,7 +78,7 @@ console.log("Ping took", `${diff}ms.`);
 
 Your final code should look like this:
 
-File name: ping.js
+File name: ping.mjs
 
 ```ts
 import { Client, functions } from "@mtkruto/node";
