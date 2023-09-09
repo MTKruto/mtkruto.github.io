@@ -29,8 +29,6 @@ Create a file called `ping.js` and import the `Client` class from MTKruto:
 const { Client } = require("@mtkruto/node");
 ```
 
-> We’re using the CJS syntax here, but ESM is also supported by `@mtkruto/node`.
-
 ## Starting the Client
 
 Before we can invoke functions, we first initialize and start a client.
