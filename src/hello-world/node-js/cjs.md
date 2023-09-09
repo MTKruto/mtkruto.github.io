@@ -1,4 +1,4 @@
-# Node.js
+# Node.js (CommonJS)
 
 MTKruto is available for Node.js on npm as
 [`@mtkruto/node`](https://npm.im/@mtkruto/node). Here you will learn how you can
